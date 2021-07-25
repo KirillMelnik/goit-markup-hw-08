@@ -1,0 +1,9 @@
+@mixin listGrid {
+  margin-left: calc(-1 * var(--margin-cards));
+  margin-top: calc(-1 * var(--margin-cards));
+}
+
+@mixin itemGrid {
+  margin-top: var(--margin-cards);
+  margin-left: var(--margin-cards);
+}

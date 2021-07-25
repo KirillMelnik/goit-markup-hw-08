@@ -1,5 +1,9 @@
 .techskills {
   padding-bottom: 94px;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .techskills__title {

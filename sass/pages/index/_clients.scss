@@ -1,5 +1,9 @@
 .clients-section {
   padding: 94px 0;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    padding: 60px 0;
+  }
 }
 
 .clients-title {
@@ -8,20 +12,36 @@
   line-height: 1.16;
   text-align: center;
   color: var(--black-color);
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.18;
+  }
 }
 
 .clients-list {
   display: flex;
   align-items: center;
   margin-top: 50px;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    @include listGrid;
+  }
 }
 
 .clients-item {
   width: 170px;
   height: 92px;
 
-  &:not(:last-child) {
-    margin-right: var(--margin-cards);
+  &:not(:first-child) {
+    margin-left: var(--margin-cards);
+  }
+
+  @media screen and (max-width: 767px) {
+    @include itemGrid;
+    flex-basis: calc((100% - 2 * var(--margin-cards)) / 2);
   }
 }
 

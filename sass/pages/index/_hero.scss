@@ -5,6 +5,14 @@
 
   & .container {
     max-width: 696px;
+
+    @media screen and (max-width: 767px) {
+      width: 400px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 118px 0;
   }
 }
 
@@ -22,6 +30,11 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    background-image: url(/images/background-hero/hero-mobile.jpg);
+  }
 }
 
 .hero-title {
@@ -32,6 +45,12 @@
   text-transform: uppercase;
   color: var(--white-color);
   margin-bottom: 30px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 26px;
+    line-height: 42px;
+    margin-bottom: 40px;
+  }
 }
 
 .hero-button {
