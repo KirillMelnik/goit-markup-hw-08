@@ -64,7 +64,7 @@ p {
 
 @media screen and (max-width: 767px) {
   .container {
-    width: 480px;
+    width: 100%;
   }
 }
 
@@ -550,25 +550,32 @@ p {
   padding: 60px 0;
 }
 
+@media screen and (max-width: 767px) {
+  .page-footer {
+    width: 100%;
+    background-color: var(--background-footer);
+  }
+}
+
 .footer-flex {
   display: flex;
   align-items: baseline;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .footer-flex {
     display: block;
     text-align: center;
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .page-footer-thumb:nth-of-type(1) {
     margin-bottom: 60px;
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .page-footer-thumb:nth-of-type(2) {
     margin-bottom: 60px;
   }
@@ -578,7 +585,7 @@ p {
   margin-right: 70px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .page-footer-thumb:not(:last-child) {
     margin-right: 0;
   }
@@ -614,7 +621,7 @@ p {
   margin-bottom: 9px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .adress-item:not(:last-child) {
     margin-bottom: 8px;
   }
@@ -647,7 +654,7 @@ p {
   display: flex;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .join-list {
     justify-content: center;
   }
@@ -710,7 +717,7 @@ p {
   line-height: 1.25;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .subscribe-email-input {
     display: block;
     width: 100%;
@@ -722,7 +729,7 @@ p {
   display: flex;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .subscribe-email-form {
     display: block;
   }
@@ -748,7 +755,7 @@ p {
   background-color: var(--modal-button);
 }
 
-@media screen and (min-width: 0) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .subscribe-email-button {
     display: flex;
     margin: 0 auto;
