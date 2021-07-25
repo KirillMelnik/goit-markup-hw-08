@@ -803,7 +803,7 @@ p {
 @media screen and (max-width: 767px) {
   .hero-overlay {
     width: 100%;
-    background-image: url(/images/background-hero/hero-mobile.jpg);
+    background-image: url(../images/background-hero/hero-mobile.jpg);
   }
 }
 
