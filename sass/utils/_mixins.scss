@@ -7,3 +7,9 @@
   margin-top: var(--margin-cards);
   margin-left: var(--margin-cards);
 }
+
+@mixin font($fs: 16px, $lh: 1.87, $ls: 0.06em) {
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}

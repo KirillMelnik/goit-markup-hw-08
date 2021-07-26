@@ -5,6 +5,7 @@
 
   @media screen and (max-width: 767px) {
     padding: 60px 0;
+    width: 100%;
   }
 }
 
@@ -13,9 +14,9 @@
   text-align: center;
 
   @media screen and (max-width: 767px) {
-    padding-right: 122px;
+    padding-right: 100px;
     padding-bottom: 24px;
-    padding-left: 122px;
+    padding-left: 100px;
   }
 }
 
@@ -53,7 +54,7 @@
 .team-list {
   display: flex;
   @media screen and (max-width: 767px) {
-    display: block;
+    flex-direction: column;
   }
 }
 
