@@ -1,8 +1,10 @@
 body {
-  font-family: var(--main-font);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
+  font: {
+    family: var(--main-font);
+    style: normal;
+    weight: normal;
+    size: 14px;
+  }
   letter-spacing: 0.03em;
 }
 
@@ -31,4 +33,8 @@ h4,
 p {
   padding: 0px;
   margin: 0px;
+}
+
+.section {
+  padding: 60px 0;
 }

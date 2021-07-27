@@ -1,25 +1,34 @@
 .advantage-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+  display: block;
 
-  &__item {
-    flex-basis: calc((100% - 4 * var(--margin-cards)) / 4);
-    margin-top: 30px;
-    margin-left: 30px;
-  }
-
-  @media screen and (max-width: 767px) {
-    display: block;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    @include listGrid;
   }
 }
 
-.advantage {
-  padding: 94px 0;
+.advantage-list__item {
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+}
 
-  @media screen and (max-width: 767px) {
-    padding: 60px 0;
+.advantage-list__item {
+  @media screen and (min-width: 768px) {
+    @include itemGrid;
+    flex-basis: calc((100% - 2 * var(--margin-cards)) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include itemGrid;
+    flex-basis: calc((100% - 4 * var(--margin-cards)) / 4);
+  }
+}
+
+.section.advantage {
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
   }
 }
 
