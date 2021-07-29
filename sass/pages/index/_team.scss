@@ -24,7 +24,7 @@
 .team-list {
   display: block;
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     @include listGrid();
@@ -47,25 +47,19 @@
   @media screen and (min-width: 768px) {
     @include itemGrid();
     flex-basis: calc((100% - 2 * var(--margin-cards)) / 2);
-    margin-bottom: 0;
   }
 
   @media screen and (min-width: 1200px) {
     @include itemGrid();
     flex-basis: calc((100% - 4 * var(--margin-cards)) / 4);
-    // margin-bottom: 0;
   }
 }
 
-//   display: flex;
-//   @media screen and (max-width: 767px) {
-//     flex-direction: column;
-//   }
-// }
-
 .team-thumb {
   padding-top: 30px;
+  padding-right: 30px;
   padding-bottom: 24px;
+  padding-left: 30px;
   text-align: center;
 }
 
@@ -87,14 +81,9 @@
 
 .socials-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin-top: 16px;
-  padding: 0 40px;
-
-  // @media screen and (min-width: 768px) {
-  //   padding: 0 60px;
-  // }
 }
 
 .socials-item {

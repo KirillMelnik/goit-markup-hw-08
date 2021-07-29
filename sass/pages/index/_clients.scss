@@ -1,47 +1,46 @@
-.clients-section {
-  padding: 94px 0;
-
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    padding: 60px 0;
+.section.clients {
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
   }
 }
 
 .clients-title {
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.18;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
   text-align: center;
   color: var(--black-color);
 
-  @media screen and (max-width: 767px) {
-    margin-bottom: 30px;
-    font-size: 28px;
-    line-height: 1.18;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
   }
 }
 
 .clients-list {
   display: flex;
-  align-items: center;
-  margin-top: 50px;
+  flex-wrap: wrap;
+  @include listGrid();
 
-  @media screen and (max-width: 767px) {
-    flex-wrap: wrap;
-    @include listGrid;
+  @media screen and (min-width: 1200px) {
+    flex-wrap: unset;
   }
 }
 
 .clients-item {
   width: 170px;
   height: 92px;
+  @include itemGrid();
+  flex-basis: calc((100% - 2 * var(--margin-cards)) / 2);
 
-  &:not(:first-child) {
-    margin-left: var(--margin-cards);
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 3 * var(--margin-cards)) / 3);
   }
 
-  @media screen and (max-width: 767px) {
-    @include itemGrid;
-    flex-basis: calc((100% - 2 * var(--margin-cards)) / 2);
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 4 * var(--margin-cards)) / 4);
   }
 }
 
