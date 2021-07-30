@@ -1,32 +1,36 @@
 .portfolio-section {
-  padding: 94px 0;
-
-  @media screen and (max-width: 767px) {
-    padding: 60px 0;
-    width: $mobile;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
   }
 }
+
+// =======buttons=======
 
 .portfolio-items-button {
+  margin-bottom: 40px;
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-top: -15px;
+  margin-left: 8px;
 
-  @media screen and (max-width: 767px) {
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    justify-content: center;
+    margin-top: unset;
+    margin-left: unset;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }
 
-.portfolio-button-item:not(:last-child) {
-  margin-right: 8px;
-}
+.portfolio-button-item {
+  margin-left: 8px;
+  margin-top: 15px;
 
-.portfolio-button-item:nth-child(1),
-.portfolio-button-item:nth-child(2) {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 15px;
+  @media screen and (min-width: 768px) {
+    margin-top: unset;
   }
 }
 
@@ -54,21 +58,35 @@
   }
 }
 
-.portfolio-cards {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--margin-cards));
-  margin-left: calc(-1 * var(--margin-cards));
+// ========end buttons========
 
-  & > .portfolio-cards-item {
-    margin-top: var(--margin-cards);
-    margin-left: var(--margin-cards);
-    flex-basis: calc(100% / 3 - var(--margin-cards));
-    outline: 1px solid var(--color-line);
+// ========cards======
+
+.portfolio-cards {
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    @include listGrid();
+  }
+}
+
+.portfolio-cards-item:not(:first-child) {
+  margin-top: 30px;
+}
+
+.portfolio-cards-item {
+  outline: 1px solid var(--color-line);
+
+  @media screen and (min-width: 768px) {
+    @include itemGrid();
+    flex-basis: calc(100% / 2 - var(--margin-cards));
   }
 
-  @media screen and (max-width: 767px) {
-    display: block;
+  @media screen and (min-width: 1200px) {
+    @include itemGrid();
+    flex-basis: calc(100% / 3 - var(--margin-cards));
   }
 }
 
@@ -112,6 +130,8 @@
 }
 
 .overflow {
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -128,7 +148,8 @@
   }
 
   & > p {
-    padding: 63px 24px;
+    padding-right: 24px;
+    padding-left: 24px;
     font-size: 18px;
     line-height: 1.56;
     color: var(--white-color);
