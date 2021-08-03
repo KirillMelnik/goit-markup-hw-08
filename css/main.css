@@ -138,7 +138,7 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 100vw;
+  width: 90vw;
   max-height: 100vh;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -150,10 +150,16 @@ p {
   transition-timing-function: var(--cubic);
 }
 
+@media screen and (min-width: 768px) {
+  .modal {
+    width: unset;
+  }
+}
+
 .close-btn {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 5px;
+  right: 10px;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -176,6 +182,13 @@ p {
   outline: none;
 }
 
+@media screen and (min-width: 768px) {
+  .close-btn {
+    top: 8px;
+    right: 8px;
+  }
+}
+
 .modal-form {
   padding: 40px;
 }
@@ -183,10 +196,16 @@ p {
 .modal-form-title {
   font-weight: bold;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: var(--black-color);
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-title {
+    line-height: 1.15;
+  }
 }
 
 .modal-form-container {
@@ -265,10 +284,18 @@ p {
 }
 
 .checkbox-container {
-  font-size: 14px;
-  line-height: 1.71;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--secondary-color);
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-container {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checbox-label {
@@ -280,6 +307,7 @@ p {
 }
 
 .checbox-label a {
+  display: contents;
   text-decoration-line: underline;
   color: var(--accent-color);
 }
@@ -333,15 +361,27 @@ p {
   background-color: var(--modal-button);
 }
 
+.header {
+  background-color: var(--white-color);
+  border-bottom: 1px solid var(--header-border);
+  padding: 16px 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: unset;
+  }
+}
+
 .container.header-container {
   justify-content: space-between;
   align-items: center;
 }
 
-.header {
-  background-color: var(--white-color);
-  border-bottom: 1px solid var(--header-border);
-  padding: 16px 15px;
+@media screen and (min-width: 768px) {
+  .container.header-container {
+    justify-content: unset;
+  }
 }
 
 .menu-list {
@@ -352,32 +392,144 @@ p {
   display: none;
 }
 
-.burger-btn {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  line-height: 0;
-  width: 40px;
-  height: 40px;
-}
-
-.mobile-menu-icon {
-  fill: var(--black-color);
-  width: 24px;
-  height: 24px;
-}
-
 .site-nav__logo {
   font-family: var(--secondary-font);
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
   color: var(--accent-color);
-  margin-right: 93px;
 }
 
-.color {
+@media screen and (min-width: 768px) {
+  .site-nav__logo {
+    padding-top: 26px;
+    margin-right: 88px;
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav__logo {
+    padding-top: 24px;
+    margin-right: 93px;
+    padding-bottom: 24px;
+  }
+}
+
+.site-nav__logo .color {
   color: var(--black-color);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-list {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-list {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-list {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-list__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.menu-list__link {
+  font-weight: 500;
+  font-size: inherit;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--black-color);
+  position: relative;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic);
+}
+
+.menu-list__link:focus, .menu-list__link:hover {
+  color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-list__link {
+    padding: 32px 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-list__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-list__item:not(:last-child) {
+    margin-bottom: unset;
+    margin-right: 30px;
+  }
+}
+
+.contacts-list__link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-color);
+  fill: currentColor;
+  display: flex;
+  align-items: center;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic);
+}
+
+.contacts-list__link:hover, .contacts-list__link:focus {
+  color: var(--accent-color);
+  fill: currentColor;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-list__link {
+    padding: 32px 0;
+  }
+}
+
+.current {
+  color: var(--accent-color);
+}
+
+.current::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-link__icon {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-link__icon {
+    margin-right: 10px;
+  }
 }
 
 .mobile-menu {
@@ -390,11 +542,19 @@ p {
   z-index: 5;
   transform: translateX(100%);
   opacity: 0;
+  visibility: hidden;
   pointer-events: auto;
-  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
+  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic), visibility 250ms var(--cubic);
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
 .mobile-menu.is-open {
+  visibility: visible;
   opacity: 1;
   pointer-events: auto;
   transform: translateX(0);
@@ -403,6 +563,27 @@ p {
 .mobile-menu-container {
   position: relative;
   padding: 48px 25px;
+}
+
+.burger-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+}
+
+.mobile-menu-icon {
+  fill: var(--black-color);
+  width: 24px;
+  height: 24px;
 }
 
 .mobile-close-button {
