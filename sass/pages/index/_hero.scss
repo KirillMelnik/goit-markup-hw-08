@@ -2,31 +2,49 @@
   background-color: var(--background-footer);
   padding: 118px 0;
   text-align: center;
-
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
   background: {
-    color: var(--gradient);
-    image: url(../images/background-hero/hero-mobile.jpg);
-    size: cover;
-    position: center;
-    repeat: no-repeat;
-  }
-
-  @media screen and (min-width: 768px) {
-    background-image: url(../images/background-hero/hero-tablet.jpg);
-  }
-
-  @media screen and (min-width: 1200px) {
-    // width: 1600;
-    padding: 200px 0;
-    background-image: linear-gradient(
+    image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/background-hero/img1.jpg);
+      url(../images/background-hero/mobile/header.jpg);
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 280px),
+      screen and (min-resolution: 192dpi) and (min-width: 280px),
+      screen and (min-resolution: 2dppx) and (min-width: 280px) {
+      background-image: url(../images/background-hero/mobile/header@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/background-hero/tablet/header.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+      screen and (min-resolution: 192dpi) and (min-width: 768px),
+      screen and (min-resolution: 2dppx) and (min-width: 768px) {
+      .hero {
+        background-image: url(../images/background-hero/tablet/header@2x.jpg);
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+    background-image: url(../images/background-hero/desktop/img1.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+      screen and (min-resolution: 192dpi) and (min-width: 1200px),
+      screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+      .hero {
+        background-image: url(../images/background-hero/desktop/img@2x.jpg);
+      }
+    }
   }
 }
 
