@@ -152,7 +152,7 @@
 }
 
 .checkbox-container {
-  // display: inline-flex;
+  display: inline-flex;
   width: 100%;
   font-size: 12px;
   line-height: 1.17;
@@ -166,7 +166,7 @@
 }
 
 .checbox-label {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
