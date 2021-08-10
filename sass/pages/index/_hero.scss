@@ -10,41 +10,37 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/background-hero/mobile/header.jpg);
+      url(../images/background-hero/mobile/header-img.webp);
     size: cover;
     position: center;
     repeat: no-repeat;
+  }
 
-    @media screen and (min-device-pixel-ratio: 2) and (min-width: 280px),
-      screen and (min-resolution: 192dpi) and (min-width: 280px),
-      screen and (min-resolution: 2dppx) and (min-width: 280px) {
-      background-image: url(../images/background-hero/mobile/header@2x.jpg);
-    }
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 280px),
+    screen and (min-resolution: 192dpi) and (min-width: 280px),
+    screen and (min-resolution: 2dppx) and (min-width: 280px) {
+    background-image: url(../images/background-hero/mobile/header-img@2x.webp);
   }
 
   @media screen and (min-width: 768px) {
-    background-image: url(../images/background-hero/tablet/header.jpg);
+    background-image: url(../images/background-hero/tablet/header-img.webp);
+  }
 
-    @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
-      screen and (min-resolution: 192dpi) and (min-width: 768px),
-      screen and (min-resolution: 2dppx) and (min-width: 768px) {
-      .hero {
-        background-image: url(../images/background-hero/tablet/header@2x.jpg);
-      }
-    }
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    background-image: url(../images/background-hero/tablet/header-img@2x.webp);
   }
 
   @media screen and (min-width: 1200px) {
     padding: 200px 0;
-    background-image: url(../images/background-hero/desktop/img1.jpg);
+    background-image: url(../images/background-hero/desktop/header-img.webp);
+  }
 
-    @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
-      screen and (min-resolution: 192dpi) and (min-width: 1200px),
-      screen and (min-resolution: 2dppx) and (min-width: 1200px) {
-      .hero {
-        background-image: url(../images/background-hero/desktop/img@2x.jpg);
-      }
-    }
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    background-image: url(../images/background-hero/desktop/header-img@2x.webp);
   }
 }
 

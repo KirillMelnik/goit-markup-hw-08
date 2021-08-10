@@ -3,7 +3,7 @@
   left: 0;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: var(--white-color);
   z-index: 5;
   transform: translateX(100%);
@@ -26,6 +26,9 @@
 }
 
 .mobile-menu-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   position: relative;
   padding: 48px 25px;
 }
@@ -76,7 +79,7 @@
 .mobile-menu-nav {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
 }
 
 .mobile-menu-list:nth-child(2) {
@@ -85,7 +88,8 @@
 
 .mobile-menu-list:nth-child(3) {
   display: flex;
-  margin-bottom: auto;
+  flex-wrap: wrap;
+  margin-top: 64px;
 }
 
 .mobile-menu-nav-item:not(:last-child) {
