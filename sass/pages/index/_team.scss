@@ -31,8 +31,8 @@
   }
 
   @media screen and (min-width: 1200px) {
-    display: flex;
-    @include listGrid();
+    // display: flex;
+    // @include listGrid();
     flex-wrap: nowrap;
   }
 }
