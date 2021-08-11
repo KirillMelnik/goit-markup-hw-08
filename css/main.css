@@ -310,8 +310,8 @@ p {
 }
 
 .checbox-label {
-  display: inline-flex;
-  flex-wrap: wrap;
+  display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   position: relative;
